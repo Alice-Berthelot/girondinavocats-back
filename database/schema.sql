@@ -1,0 +1,2 @@
+-- c'est là qu'il faut mettre le schema.sql 
+-- il reste à implémenter mysql, etc.
