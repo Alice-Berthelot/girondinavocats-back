@@ -12,16 +12,15 @@ tables.lawyer = new LawyerRepository();
 tables.appointment = new AppointmentRepository();
 tables.time_slot = new TimeSlotRepository();
 
-
 // Use a Proxy to customize error messages when trying to access a non-existing table
 module.exports = new Proxy(tables, {
-  get(obj, prop) {
-    // Check if the property (table) exists in the tables object
-    if (prop in obj) return obj[prop];
+  get(tableObject, tableName) {
+    // Check if the table exists in the tables object
+    if (tableName in tableObject) return tableObject[tableName];
 
-    // If the property (table) does not exist, throw a ReferenceError with a custom error message
+    // If the table does not exist, throw a ReferenceError with a custom error message
     throw new ReferenceError(
-      `tables.${prop} is not defined`
+      `tables.${tableName} is not defined`
     );
   },
 });
