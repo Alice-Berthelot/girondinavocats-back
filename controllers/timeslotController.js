@@ -3,7 +3,7 @@
 // const tables = require("../../database/tables");
 
 // check the name of getAvailability
-const readAllTimeslots = async (req, res, next) => {
+const getAllTimeslots = async (req, res, next) => {
     try {
       const timeSlots = await tables.time_slot.getAvailability();
       res.json(timeSlots);
@@ -13,6 +13,6 @@ const readAllTimeslots = async (req, res, next) => {
   };
   
   module.exports = {
-    readAllTimeslots,
+    getAllTimeslots,
   };
   

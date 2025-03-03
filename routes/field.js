@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { readAllFields } = require("../controllers/fieldController");
+const { getAllFields } = require("../controllers/fieldController");
 
-router.get("/", readAllFields);
+router.get("/", getAllFields);
 
 module.exports = router;
 

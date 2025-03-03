@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { readAllTimeslots } = require("../controllers/timeslotController");
+const { getAllTimeslots } = require("../controllers/timeslotController");
 
-router.get("/", readAllTimeslots);
+router.get("/", getAllTimeslots);
 
 module.exports = router;
 

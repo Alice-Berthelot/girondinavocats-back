@@ -2,7 +2,7 @@
 // Dans Harmonia :
 // const tables = require("../../database/tables");
 
-const readAllAppointments = async (req, res, next) => {
+const getAllAppointments = async (req, res, next) => {
   try {
     const appointments = await tables.appointment.readAll();
     res.json(appointments);
@@ -42,7 +42,7 @@ const deleteAppointment = async (req, res, next) => {
 };
 
 module.exports = {
-  readAllAppointments,
+  getAllAppointments,
   updateAppointment,
   createAppointment,
   deleteAppointment,

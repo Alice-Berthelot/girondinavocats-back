@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const { readAllLawyers } = require("../controllers/lawyerController");
+const { getAllLawyers } = require("../controllers/lawyerController");
 
-router.get("/", readAllLawyers);
+router.get("/", getAllLawyers);
 
 module.exports = router;
 

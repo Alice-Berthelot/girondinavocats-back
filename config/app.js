@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
-const lawyerRoutes = require('./routes/lawyer')
-const appointmentRoutes = require('./routes/appointment')
+const lawyerRoutes = require('../routes/lawyer')
+const appointmentRoutes = require('../routes/appointment')
+const clientRoutes = require('../routes/appointment')
+const fieldRoutes = require('../routes/appointment')
+const timeslotRoutes = require('../routes/appointment')
 
 app.use(express.json()); 
 
@@ -19,4 +22,4 @@ app.use((req, res, next) => {
     next();
   });
 
-const lawyers = (module.exports = app);
+module.exports = app;
