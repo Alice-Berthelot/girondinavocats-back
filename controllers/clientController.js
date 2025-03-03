@@ -1,6 +1,4 @@
-// ajouter le lien avec la BDD, dans harmonia on le fait au niveau des controllers
-// Dans Harmonia :
-// const tables = require("../../database/tables");
+const tables = require("../database/tables");
 
 const createClient = async (req, res, next) => {
   const client = req.body;

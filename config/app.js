@@ -8,13 +8,14 @@ const timeslotRoutes = require('../routes/appointment')
 
 app.use(express.json()); 
 
+// ROUTES
 app.use('/api/lawyers', lawyerRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api/clients', clientRoutes);
 app.use('/api/fields', fieldRoutes);
 app.use('/api/timeslots', timeslotRoutes);
 
-// CORS :
+// CORS
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
