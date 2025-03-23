@@ -31,14 +31,4 @@ app.use('/api/timeslots', timeslotRoutes);
 // EXPRESS STATIC (read multimedia files)
 app.use(express.static(path.join(__dirname, "../public/assets/images")));
 
-// const reactBuildPath = path.join(__dirname, "/../../client/dist");
-// const publicFolderPath = path.join(__dirname, "/../public/assets/images");
-
-// app.use(express.static(reactBuildPath));
-// app.get("*.*", express.static(publicFolderPath, { maxAge: "1y" }));
-
-// app.get("*", (_, res) => {
-//   res.sendFile(path.join(reactBuildPath, "/index.html"));
-// });
-
 module.exports = app;
