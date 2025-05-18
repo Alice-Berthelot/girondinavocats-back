@@ -10,5 +10,4 @@ COPY . .
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "node bin/migrate.js && node bin/seed.js && node server.js"]
-
+CMD ["node", "server.js"]
